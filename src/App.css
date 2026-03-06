@@ -5,11 +5,24 @@ body {
   padding: 0;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* full height for the page */
+}
+
 .container {
-  max-width: 480px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;          /* full viewport height */
   padding: 20px 10px;
+}
+
+.header {
+  font-size: 48px;
+  font-weight: bold;
   text-align: center;
+  color: #333;
 }
 
 h1 {
@@ -19,10 +32,11 @@ h1 {
 
 .parking-lot {
   display: flex;
-  justify-content: center;
-  gap: 15px;
+  justify-content: center; /* center horizontally */
+  gap: 15px;               /* spacing between slots */
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  flex-grow: 1;             /* take all remaining vertical space */
+  align-items: center;      /* center vertically */
 }
 
 .parking-slot {

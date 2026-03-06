@@ -26,8 +26,10 @@ function App() {
   }, []);
 
   return (
+
+    
     <div className="container">
-      <h1>Smart Parking</h1>
+      <h1 className="header">Smart Parking System</h1>
       <div className="parking-lot">
         {["slot1", "slot2", "slot3"].map((slot, index) => (
           <div key={slot} className="parking-slot">
