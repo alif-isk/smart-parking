@@ -1,13 +1,79 @@
-.container{
-  text-align:center;
-  font-family:Arial;
-  margin-top:40px;
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
 }
 
-.slot{
-  font-size:24px;
-  margin:20px;
-  padding:20px;
-  border:2px solid #ccc;
-  border-radius:10px;
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.parking-lot {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.parking-slot {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  width: 20%;
+  min-width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slot-label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.indicator {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  border: 2px solid #333;
+}
+
+.indicator.occupied {
+  background: red;
+}
+
+.indicator.empty {
+  background: green;
+}
+
+.distance {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.status {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 2px;
+  color: #333;
+}
+
+.available {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
 }
