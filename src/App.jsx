@@ -9,12 +9,12 @@ function App() {
   });
 
   const isOccupied = (distance) => {
-    return Number(distance) < 15; // threshold for occupancy
+    return Number(distance) < 20; // threshold for occupancy
   };
 
   useEffect(() => {
     const fetchData = () => {
-      fetch("http://192.168.1.62/data") // replace with your ESP32 IP
+      fetch("http://192.168.1.59/data") // replace with your ESP32 IP
         .then((res) => res.json())
         .then((data) => setSlots(data))
         .catch((err) => console.log(err));
