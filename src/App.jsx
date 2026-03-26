@@ -2,16 +2,19 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
+  // Default values for parking slots
   const [slots, setSlots] = useState({
     slot1: 0,
     slot2: 0,
     slot3: 0,
   });
 
+  // Distance < 20cm indicates a car is present
   const isOccupied = (distance) => {
     return Number(distance) < 20; // threshold for occupancy
   };
 
+  // Fetch sensor data from ESP32 microcontroller
   useEffect(() => {
     const fetchData = () => {
       fetch("http://192.168.1.59/data") // replace with your ESP32 IP
